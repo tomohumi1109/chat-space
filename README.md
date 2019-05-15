@@ -29,7 +29,6 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|
 |name|string|null: false, index: true|
 
 
@@ -44,14 +43,13 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|
 |email|string|null: false, unique: true|
 |name|string|null: false, index: true|
 |password|string|null: false|
 
 
 ### Association
-- has_many :groups
+- has_many :groups, through: :group_users
 - has_many :masseges
 - has_many :group_users
 
@@ -61,11 +59,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|
 |text|text|
 |image|string|
-|user_id|reference|foreign_key: true||
-|group_id|reference|foreign_key: true||
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 |timestamp|
 
 ### Association
@@ -78,9 +75,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer||
-|user_id|reference|foreign_key: true||
-|group_id|reference|foreign_key: true||
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belogns_to :user

@@ -33,7 +33,7 @@ Things you may want to cover:
 
 
 ### Association
-- has_many :users
+- has_many :users, through: : group_users
 - has_many :masseges
 - has_many :group_users
 

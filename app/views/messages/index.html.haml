@@ -1,0 +1,56 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ChatSpaceProto
+    %meta{:content => "authenticity_token", :name => "csrf-param"}/
+    %meta{:content => "Mfu41T+Cu0a/Rcb1ipbwC0fAURmnkwM2PLiasw7dn+FpJ4TIILCyaR1lYVJTQrKE+XjBh+My6+I9wuT8RVgz3A==", :name => "csrf-token"}/
+    %link{"data-turbolinks-track" => "reload", :href => "/assets/application-2f82c62a7612ec80c93af4b8afb77ffcec39f6615209cc44a6bf245204dcd451.css", :media => "all", :rel => "stylesheet"}/
+    %script{"data-turbolinks-track" => "reload", :src => "/assets/application-8edc245abda810768ef3fe3c5173b344b19ab2bd6c346c842d24949e917a271d.js"}
+  %body
+    .flash-box
+    .wrapper
+      .chat-side
+        .side-header
+          %p.side-header__user-name abcde
+          %ul.user-menu
+            %li.user-menu__edit-user
+              %a{:href => "/groups/new"}
+                %i.fa.fa-edit
+            %li.user-menu__new-group
+              %a{:href => "/users/647/edit"}
+                %i.fa.fa-cog
+        .groups
+          %a{:href => "/groups/1368/messages"}
+            .group
+              %p.group__group-name EXP__
+              %p.group__latest-message まだメッセージがありません
+          %a{:href => "/groups/1367/messages"}
+            .group
+              %p.group__group-name EXP
+              %p.group__latest-message こんにちは
+      .chat-main
+        .main-header
+          .current-group{"data-group_id" => "1367"}
+            %h2.current-group__name EXP
+            %ul.member-list
+              Member：
+              %li.member-list__member abcde
+          %a{:href => "/groups/1367/edit"}
+            .main-header__edit-btn Edit
+        .messages
+          .message{"data-message_id" => "3327"}
+            .upper-info
+              %p.upper-info__user abcde
+              %p.upper-info__date 2019/05/16(Thu) 22:17:41
+            %p.message__text こんにちは
+        .form
+          %form#new_message.new-message{"accept-charset" => "UTF-8", :action => "/groups/1367/messages", :enctype => "multipart/form-data", :method => "post"}
+            %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+            %input{:name => "authenticity_token", :type => "hidden", :value => "YimC91Xty8gOiJc04ku0G6jJLxEFUvyr31Yuj0aZSA8g3PzxylQ6jAx3TnaLBBDnvtw9YrS1MSLrxTLWc00oMw=="}/
+            .input-box
+              %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+              %label.image-label{:for => "message_image"}
+                %i.fa.fa-image
+                %input#message_image.image-label__input{:name => "message[image]", :type => "file"}/
+            %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/

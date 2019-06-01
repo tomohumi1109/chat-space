@@ -4,7 +4,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title ChatSpaceProto
     %meta{:content => "authenticity_token", :name => "csrf-param"}/
-    %meta{:content => "Mfu41T+Cu0a/Rcb1ipbwC0fAURmnkwM2PLiasw7dn+FpJ4TIILCyaR1lYVJTQrKE+XjBh+My6+I9wuT8RVgz3A==", :name => "csrf-token"}/
+    %meta{:content => "LOYDlxL9YHqZFGMUtcU0zEX7fENZotW7mcsHv04KuDTz6RU1af3ZSOs3VawSGFQTDkNz/p57PMq6K4pMEfYPJA==", :name => "csrf-token"}/
     %link{"data-turbolinks-track" => "reload", :href => "/assets/application-2f82c62a7612ec80c93af4b8afb77ffcec39f6615209cc44a6bf245204dcd451.css", :media => "all", :rel => "stylesheet"}/
     %script{"data-turbolinks-track" => "reload", :src => "/assets/application-8edc245abda810768ef3fe3c5173b344b19ab2bd6c346c842d24949e917a271d.js"}
   %body
@@ -24,33 +24,32 @@
           %a{:href => "/groups/1368/messages"}
             .group
               %p.group__group-name EXP__
-              %p.group__latest-message まだメッセージがありません
+              %p.group__latest-message こんにちは
           %a{:href => "/groups/1367/messages"}
             .group
               %p.group__group-name EXP
               %p.group__latest-message こんにちは
       .chat-main
         .main-header
-          .current-group{"data-group_id" => "1367"}
-            %h2.current-group__name EXP
+          .current-group{"data-group_id" => "1368"}
+            %h2.current-group__name EXP__
             %ul.member-list
               Member：
-              %li.member-list__member abcde
-          %a{:href => "/groups/1367/edit"}
+              %li.member-list__member abc
+          %a{:href => "/groups/1368/edit"}
             .main-header__edit-btn Edit
         .messages
-          .message{"data-message_id" => "3327"}
+          .message{"data-message_id" => "3581"}
             .upper-info
               %p.upper-info__user abcde
-              %p.upper-info__date 2019/05/16(Thu) 22:17:41
+              %p.upper-info__date 2019/05/24(Fri) 09:25:47
             %p.message__text こんにちは
         .form
-          %form#new_message.new-message{"accept-charset" => "UTF-8", :action => "/groups/1367/messages", :enctype => "multipart/form-data", :method => "post"}
+          %form#new_message.new-message{"accept-charset" => "UTF-8", :action => "/groups/1368/messages", :enctype => "multipart/form-data", :method => "post"}
             %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-            %input{:name => "authenticity_token", :type => "hidden", :value => "YimC91Xty8gOiJc04ku0G6jJLxEFUvyr31Yuj0aZSA8g3PzxylQ6jAx3TnaLBBDnvtw9YrS1MSLrxTLWc00oMw=="}/
+            %input{:name => "authenticity_token", :type => "hidden", :value => "WNzgI8XdewCnl4JgsKepCzk8+iuIQeP6KpyvaDjBDUTdsntONgrRM61v1LGeCo5uF+47Ea7VAOcY5H/jFAieFQ=="}/
             .input-box
               %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
               %label.image-label{:for => "message_image"}
                 %i.fa.fa-image
-                %input#message_image.image-label__input{:name => "message[image]", :type => "file"}/
             %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/

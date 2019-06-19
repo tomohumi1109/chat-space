@@ -5,41 +5,42 @@
   a{
   color: white;
 }
-.left-header {
-  background-color: $deep-navy;
-  height: 105px;
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  justify-content: space-between;
-  width: 100%;
-  font-weight: bold;
-  font-size: 16px;
-  box-sizing: border-box;
-  border-bottom: double 5px #151f2e;
+
+  .left-header {
+    background-color: $deep-navy;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-bottom: double 5px #151f2e;
+  }
+  .user-menu{
+    display: flex;
+  }
 }
-.user-menu{
-  display: flex;
-}
-}
+
 .groups {
   height: calc(100vh - 90px);
   background-color: $dark-navy;
   padding: 25px 15px 0;
   overflow: scroll;
-  
-   .group {
-     margin-bottom: 5px;
-     &__group-name{
-       font-size: 30px;
-       color: $white;
-       display: flex;
-     }
-     &__latest-message{
-       font-size: 11px;
-       color: $white;
-       margin-top: 5px;
-       margin-bottom:40px;
-     }
+  .group {
+    margin-bottom: 5px;
+    &__group-name{
+      font-size: 30px;
+      color: $white;
+      display: flex;
+    }
+    &__latest-message{
+      font-size: 11px;
+      color: $white;
+      margin-top: 5px;
+      margin-bottom:40px;
+    }
   }
 }

@@ -1,7 +1,7 @@
-.chat-main{
+.light-content{
   width: calc(100vw - 300px);
   float: left;
-  .main-header{
+  .light-header{
     height: 100px;
     padding: 0 40px;
     display: flex;
@@ -16,7 +16,7 @@
         font-size: 20px;
         margin-bottom: 15px;
       }
-      
+
       &__list{
         display: flex;
         margin-top: 15px;
@@ -78,12 +78,12 @@
       }
     }  
   }
+
 .form{
   height: 50px;
   padding: 30px ;
   background-color: $white-gray;
-   .input-box{
-     
+   .input-box{    
      position: relative;
      height: 50px;
      width: 100%;
@@ -112,7 +112,7 @@
       background-color: $sky-blue;
       color: $white;
       cursor: pointer;
-    }
-   }   
+     }
+    }   
   }
 }

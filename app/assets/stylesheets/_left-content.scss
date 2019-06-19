@@ -28,7 +28,7 @@
   height: calc(100vh - 115px);
   background-color: $dark-navy;
   padding: 25px 15px 0;
-  overflow: scroll;
+  overflow: hidden;
   .group {
     margin-bottom: 5px;
     &__group-name{

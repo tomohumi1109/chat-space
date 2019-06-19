@@ -49,10 +49,10 @@
   }
 
   .messages{
-    height:calc(100vh - 185px);
-    padding: 46px 40px;
-    background-color: $white;
+    height:calc(100vh - 175px);
+    padding: 30px 20px 0;
     overflow: scroll;
+    background-color: $white;
     box-sizing: border-box;
     .massage{
       margin-bottom: 40px;
@@ -80,7 +80,7 @@
   }
 .form{
   height: 50px;
-  padding: 28px 40px;
+  padding: 30px ;
   background-color: $white-gray;
    .input-box{
      

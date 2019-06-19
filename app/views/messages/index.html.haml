@@ -14,16 +14,7 @@
           %i.fa.fa-cog
 
     .groups
-      .group
-        %p.group__name 
-          ライフコーチ
-        %p.group__latest-message 
-          アプリ作成
-      .group
-        %p.group__name 
-          ライフコーチ
-        %p.group__latest-message 
-          アプリ作成
+      = render "groups"
 
   .chat-main
     .main-header
@@ -38,22 +29,7 @@
         Edit
 
     .messages
-      .massage
-        .upper-info
-          %span.upper-info__user 
-            ライフコーチ
-          %span.upper-info__date   
-            2019/05/24 09:25:47
-        .text
-          a
-      .massage
-        .upper-info
-          %span.upper-info__user 
-            ライフコーチ
-          %span.upper-info__date   
-            2019/05/24 09:25:47
-        .text
-          a
+      = render "massages"
 
     .form
       .input-box

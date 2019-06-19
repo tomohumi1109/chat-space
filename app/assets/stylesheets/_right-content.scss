@@ -49,9 +49,9 @@
   }
 
   .messages{
-    height:calc(100vh - 175px);
+    height:calc(100vh - 200px);
     padding: 30px 20px 0;
-    overflow: scroll;
+    overflow: hidden;
     background-color: $white;
     box-sizing: border-box;
     .massage{

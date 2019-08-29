@@ -2,16 +2,10 @@
   .massage
     .upper-info
       %span.upper-info__user 
-        ライフコーチ
+         = message.user.name
       %span.upper-info__date   
-        2019/05/24 09:25:47
+        = message.created_at.strftime("%Y/%m/%d %H:%M")
     .text
-      a
-  .massage
-    .upper-info
-      %span.upper-info__user 
-        ライフコーチ
-      %span.upper-info__date   
-        2019/05/24 09:25:47
-    .text
-      a
+      - if message.content.present?
+      = message.content
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

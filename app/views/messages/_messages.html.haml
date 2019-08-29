@@ -1,5 +1,5 @@
 .messages
-  .massage
+  .message
     .upper-info
       %span.upper-info__user 
         = message.user.name
@@ -7,5 +7,6 @@
         = message.created_at.strftime("%Y/%m/%d %H:%M")
     .text
       - if message.content.present?
-      = message.content
+        %p.lower-message__content
+          = message.content
       = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

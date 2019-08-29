@@ -30,8 +30,10 @@
       = render "massages"
 
     .form
-      .input-box
-        %input.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
-        %label.image-label{for: "message_image"}
-          %i.fa.fa-image
-        %input.input-box__submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

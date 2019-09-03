@@ -49,7 +49,7 @@
   }
 
   .messages{
-    height:calc(100vh - 200px);
+    height:calc(100vh - 180px);
     padding: 30px 20px 0;
     overflow: hidden;
     background-color: $white;
@@ -81,38 +81,36 @@
 
 .form{
   height: 50px;
-  padding: 30px ;
+  padding: 20px 50px 20px 40px ;
   background-color: $white-gray;
-   .input-box{    
-     position: relative;
-     height: 50px;
-     width: 100%;
-     padding: 0 40px 0 10px;
-     color: #434a54;
-     border-style: none;
-     &__text{
-       height: 50px;
-       width: 80%;
-       padding: 0 40px 0 10px;
-       color: $blue-gray;
-       border-style: none;
-     }
-     .image-label {
-       font-size: 1.3rem;
-       position: absolute;
-       top: 10px;
-       right: 220px;
-       cursor: pointer;
-     }
-     &__submit-btn {
-      width: 100px;
+  &__message{
+    border: none;
+    float:left;
+    height: 50px;
+    width: calc(100% - 150px);
+  }
+  &__box{    
+    background-color: $white;
+    float: left;
+    height: 50px;
+    padding-right: 10px; 
+    &__image {
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+    &__submit{
       height: 50px;
+      border: none;
+      float: right;
+      font-size: 16px;
       padding: 0 30px;
       margin-left: 15px;
       background-color: $sky-blue;
       color: $white;
-      cursor: pointer;
-     }
-    }   
+    }
   }
 }

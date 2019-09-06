@@ -6,11 +6,13 @@
         %h2.current-group__name  
           = current_user.name
         %ul.current-group__list  
-          Member:
+          
           %li.current-group__member  
-          a
+            Member:
+            - @group.users.each do |member|
+              = member.name
       .light-header__edit-btn 
-        = link_to edit_group_path do
+        = link_to'EDIT', edit_group_path(@group)
     .messages
       = render @messages
     .form

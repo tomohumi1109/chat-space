@@ -10,11 +10,9 @@
           %li.current-group__member  
           a
       .light-header__edit-btn 
-        Edit
-
+        = link_to edit_group_path do
     .messages
       = render @messages
-
     .form
       %form
         %input.form__message
